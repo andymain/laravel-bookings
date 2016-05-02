@@ -36,16 +36,6 @@ Route::get('/', function () {
  */
 Route::post('/booking', function (Request $request) {
 
-    /*$validator = Validator::make($request->all(), [
-        'name' => 'required|max:255',
-    ]);
-
-    if ($validator->fails()) {
-        return redirect('/')
-            ->withInput()
-            ->withErrors($validator);
-    }*/
-
     // Create The Booking...
     $booking = new \App\Booking;
     $booking->name = $request->name;

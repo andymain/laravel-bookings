@@ -1,14 +1,4 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Andy
- * Date: 30/04/2016
- * Time: 20:10
- */
-
- ?>
-
- <!-- resources/views/bookings.blade.php -->
+<!-- resources/views/bookings.blade.php -->
 
 @extends('layouts.app')
 
@@ -108,39 +98,42 @@
                                 <!-- Booking Name -->
                                 <td class="table-text">
                                     <div>{{ $booking->name }}</div>
-                                    </td>
-                                      <td class="table-text">
-                                     <div>{{ $booking->start_time }}</div>
-                                       </td>
-                                            <td class="table-text">
-                                      <div>{{ $booking->end_time }}</div>
-                                        </td>
-                                              <td class="table-text">
-                                       <div>{{ $booking->service }}</div>
-                                         </td>
-                                            <td class="table-text">
-                                        <div>{{ $booking->customer }}</div>
-                                          </td>
-                                            <td class="table-text">
-                                         <div>{{ $booking->staff }}</div>
+                                </td>
+
+                                <td class="table-text">
+                                    <div>{{ $booking->start_time }}</div>
+                                </td>
+
+                                <td class="table-text">
+                                    <div>{{ $booking->end_time }}</div>
+                                </td>
+
+                                <td class="table-text">
+                                    <div>{{ $booking->service }}</div>
+                                </td>
+
+                                <td class="table-text">
+                                    <div>{{ $booking->customer }}</div>
+                                </td>
+
+                                <td class="table-text">
+                                    <div>{{ $booking->staff }}</div>
                                 </td>
 
 
 
                                         <!-- Delete Button -->
-                                        <td>
-                                            <form action="{{ url('booking/'.$booking->id) }}" method="POST">
-                                                {!! csrf_field() !!}
-                                                {!! method_field('DELETE') !!}
-
+                                <td>
+                                    <form action="{{ url('booking/'.$booking->id) }}" method="POST">
+                                        {!! csrf_field() !!}
+                                        {!! method_field('DELETE') !!}
                                                 <button type="submit" class="btn btn-danger">
                                                     <i class="fa fa-trash"></i> Delete
                                                 </button>
-                                            </form>
-                                        </td>
-                                    </tr>
+                                    </form>
                                 </td>
                             </tr>
+
                         @endforeach
                     </tbody>
                 </table>

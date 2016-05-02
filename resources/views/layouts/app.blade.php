@@ -1,13 +1,4 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Andy
- * Date: 30/04/2016
- * Time: 20:11
- */
- ?>
-
- <!-- resources/views/layouts/app.blade.php -->
+<!-- resources/views/layouts/app.blade.php -->
 
  <!DOCTYPE html>
  <html lang="en">
